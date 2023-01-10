@@ -11,8 +11,9 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   login(username: string, password: string) {
-    debugger;
+
     return this.http.post('login', { username, password });
+
   }
 
 

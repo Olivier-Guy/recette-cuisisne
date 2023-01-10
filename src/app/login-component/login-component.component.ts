@@ -37,7 +37,8 @@ export class LoginComponent implements OnInit {
     this.authService
       .login(this.form.get('username')?.value, this.form.get('password')?.value)
       .subscribe((response: any) => {
-        this.router.navigate(['/main']);
+        this.router.navigate(['/recettes']);
+
       });
   }
 

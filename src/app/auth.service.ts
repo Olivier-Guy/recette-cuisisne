@@ -28,8 +28,11 @@ export class AuthService {
 
     return this.apiService.login(username, password).pipe(
       tap((response: any) => {
-        this._isLoggedIn$.next(true);
-        localStorage.setItem('profanis_auth', response.token);
+
+        this._isLoggedIn$.next(false);
+
+
+        localStorage.setItem('local_auth', response.token);
       })
     );
 

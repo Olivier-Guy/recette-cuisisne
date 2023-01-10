@@ -17,7 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login-component/login-component.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { ListeRecetteComponent } from './liste-recette/liste-recette.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -28,7 +28,7 @@ import { FakeBackendProvider } from './fake-backend.interceptor';
   declarations: [
     AppComponent,
       LoginComponent,
-      NavigationComponent
+      ListeRecetteComponent
    ],
   imports: [
     BrowserModule,
