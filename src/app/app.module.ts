@@ -17,17 +17,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login-component/login-component.component';
+import { NavigationComponent } from './navigation/navigation.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FakeBackendProvider } from './fake-backend.interceptor';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-      LoginComponent
+      LoginComponent,
+      NavigationComponent
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatInputModule,
     MatCardModule,
@@ -38,8 +46,9 @@ import { LoginComponent } from './login-component/login-component.component';
     MatSlideToggleModule,
     MatSelectModule,
     MatOptionModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [FakeBackendProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
