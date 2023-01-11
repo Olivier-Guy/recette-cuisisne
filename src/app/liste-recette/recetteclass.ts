@@ -1,7 +1,8 @@
 export class Recetteclass {
 
   // 1 - Proprietes
-  public name: string = "";
+  public id!: number;
+  public name!: string;
   public categorie!: categorieList;
   public duree!: dureeList;
   public indiceNutritionel!: indiceNutritionelList;
@@ -10,8 +11,9 @@ export class Recetteclass {
 
   // 2 - Ingrédients
 
-  constructor(name: string, categorie: categorieList, duree: dureeList){
-
+  constructor(id: number, name: string){
+    this.id = id;
+    this.name = name;
   }
 
   serialize() {
@@ -22,14 +24,14 @@ export class Recetteclass {
     const recette : ReturnType<Recetteclass["toObject"]> = JSON.parse(serialized);
 
     return new Recetteclass(
+      recette.id,
       recette.name,
-      recette.categorie,
-      recette.duree
     )
   }
 
   toObject(){
     return {
+        id: this.id,
         name : this.name,
         categorie : this.categorie,
         duree : this.duree,

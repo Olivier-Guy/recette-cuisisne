@@ -8,7 +8,7 @@
     </mat-card-header>
     <mat-card-content>{{item.categorie}} - {{item.duree}} - {{item.indiceNutritionel}} - {{item.typePlat}} - {{item.difficulte}}</mat-card-content>
     <mat-card-actions align="end">
-      <button mat-button (click)="openRecette($event)">
+      <button mat-button [routerLink]="['/recette', item.id]"> <!-- (click)="openRecette($event) -->
         <mat-icon>open_in_new</mat-icon> Ouvrir</button>
       <button mat-button>
         <mat-icon>share</mat-icon> Partager</button>

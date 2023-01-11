@@ -1,4 +1,8 @@
-<p>
-  recette works!
-</p>
-<div>{{this.recette.name}}</div>
+
+<div *ngIf="recette | async as recetteForm">
+  <h3>{{ recetteForm.name }}</h3>
+  <!-- <p>Id: {{ recetteForm.id }}</p>
+  <label for="hero-name">Recette : </label>
+  <input type="text" id="hero-name" [(ngModel)]="recetteForm.name" placeholder="name"/> -->
+  <button type="button" (click)="gotoRecettes()">Back</button>
+</div>

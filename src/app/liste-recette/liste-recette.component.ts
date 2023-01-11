@@ -20,7 +20,7 @@ export class ListeRecetteComponent implements OnInit {
 
     for (var i = 0; i < Recettes.length; i++)
     {
-      var nouvRecette: Recetteclass = new Recetteclass(Recettes[i].nom, Recettes[i].categorie ,Recettes[i].duree);
+      var nouvRecette: Recetteclass = new Recetteclass(Recettes[i].id, Recettes[i].nom);
       nouvRecette.name = Recettes[i].nom;
       this.listeRecetteFile.push(nouvRecette);
     }
@@ -30,7 +30,6 @@ export class ListeRecetteComponent implements OnInit {
   openRecette(event: any)
   {
     // 1 - Récupération de l'index de la recette dans la liste
-    debugger;
     this.router.navigate(['/recette'])
   }
 
