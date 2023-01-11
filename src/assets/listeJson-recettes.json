@@ -1,8 +1,12 @@
 [
 {
-  "nom": "Recette 1"
+  "nom": "Recette 1",
+  "duree": 1,
+  "categorie": 1
 },
 {
-  "nom": "Recette 2"
+  "nom": "Recette 2",
+  "duree": 1,
+  "categorie": 1
 }
 ]

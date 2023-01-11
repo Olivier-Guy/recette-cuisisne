@@ -1,12 +1,17 @@
 
   <div> Liste des recettes  </div>
 
-  <mat-card *ngFor="let item of listeRecetteFile" class="recette-card">
+  <mat-card *ngFor="let item of listeRecetteFile" class="recette-card" fle>
     <!-- 1 - Title -->
     <mat-card-header>
       <mat-card-title>{{item.name}}</mat-card-title>
     </mat-card-header>
-
-    <mat-card-content>{{item.name}}</mat-card-content>
+    <mat-card-content>{{item.categorie}} - {{item.duree}} - {{item.indiceNutritionel}} - {{item.typePlat}} - {{item.difficulte}}</mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button (click)="openRecette($event)">
+        <mat-icon>open_in_new</mat-icon> Ouvrir</button>
+      <button mat-button>
+        <mat-icon>share</mat-icon> Partager</button>
+     </mat-card-actions>
   </mat-card>
 
