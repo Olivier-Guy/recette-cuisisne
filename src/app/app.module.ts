@@ -22,13 +22,15 @@ import { ListeRecetteComponent } from './liste-recette/liste-recette.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FakeBackendProvider } from './fake-backend.interceptor';
+import { RecetteComponent } from './recette/recette.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
       LoginComponent,
-      ListeRecetteComponent
+      ListeRecetteComponent,
+      RecetteComponent
    ],
   imports: [
     BrowserModule,

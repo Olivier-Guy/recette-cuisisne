@@ -1,3 +1,12 @@
 
   <div> Liste des recettes  </div>
 
+  <mat-card *ngFor="let item of listeRecetteFile" class="recette-card">
+    <!-- 1 - Title -->
+    <mat-card-header>
+      <mat-card-title>{{item.name}}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>{{item.name}}</mat-card-content>
+  </mat-card>
+
