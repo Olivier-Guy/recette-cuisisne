@@ -9,7 +9,11 @@ export class Recetteclass {
   public typePlat!: typePlatList;
   public difficulte!: difficulteList;
 
-  // 2 - Ingrédients
+  // 2 - Recette
+  public description!: string;
+  public ingredients: string[] = [];
+  public processus: string[] = [];
+  public liens: string[] = [];
 
   constructor(id: number, name: string){
     this.id = id;

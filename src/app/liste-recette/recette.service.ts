@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Recetteclass } from '../liste-recette/recetteclass';
+import { dureeList, Recetteclass } from '../liste-recette/recetteclass';
 import Recettes from '../../assets/listeJson-recettes.json';
 import { map, Observable, of } from 'rxjs';
 
@@ -18,6 +18,12 @@ constructor() { }
       var newId = newRecette.id;
       var newName = newRecette.nom;
       var newRecetteInstance = new Recetteclass(newId, newName);
+      newRecetteInstance.description = newRecette.description;
+      newRecetteInstance.duree = newRecette.duree;
+      newRecetteInstance.categorie = newRecette.categorie;
+      newRecetteInstance.ingredients = newRecette.ingredients;
+      newRecetteInstance.processus = newRecette.processus;
+      newRecetteInstance.liens = newRecette.liens;
       listeRecette.push(newRecetteInstance);
     }
     return of(listeRecette);

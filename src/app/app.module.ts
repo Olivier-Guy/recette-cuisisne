@@ -12,6 +12,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDividerModule } from '@angular/material/divider';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,7 +29,7 @@ import { RecetteComponent } from './recette/recette.component';
 
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       LoginComponent,
       ListeRecetteComponent,
@@ -49,6 +52,8 @@ import { RecetteComponent } from './recette/recette.component';
     MatSelectModule,
     MatOptionModule,
     HttpClientModule,
+    MatExpansionModule,
+    MatDividerModule
   ],
   providers: [FakeBackendProvider],
   bootstrap: [AppComponent]

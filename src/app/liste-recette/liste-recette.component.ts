@@ -10,6 +10,7 @@ import {Router} from "@angular/router";
 })
 export class ListeRecetteComponent implements OnInit {
 
+  searchedText!: string;
   listeRecetteFile: Recetteclass[] = [];
 
   constructor(private router: Router) { }

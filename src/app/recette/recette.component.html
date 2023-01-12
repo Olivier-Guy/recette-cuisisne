@@ -1,8 +1,76 @@
 
 <div *ngIf="recette | async as recetteForm">
-  <h3>{{ recetteForm.name }}</h3>
-  <!-- <p>Id: {{ recetteForm.id }}</p>
-  <label for="hero-name">Recette : </label>
-  <input type="text" id="hero-name" [(ngModel)]="recetteForm.name" placeholder="name"/> -->
-  <button type="button" (click)="gotoRecettes()">Back</button>
+
+  <!-- A - Title -->
+
+ <mat-card class="recette-title-card" flex>
+  <mat-card-header>
+    <mat-card-title>{{ recetteForm.name }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content> {{ recetteForm.description }}</mat-card-content>
+</mat-card>
+
+  <!-- B - Contenu Recette -->
+  <mat-accordion>
+    <!-- 1 - Ingredients -->
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          1
+        </mat-panel-title>
+        <mat-panel-description>
+          Ingredients
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p *ngFor="let ingdt of recetteForm.ingredients">
+        <li> {{ ingdt }} </li>
+      </p>
+    </mat-expansion-panel>
+     <!-- 2 - Processus -->
+     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          2
+        </mat-panel-title>
+        <mat-panel-description>
+          Méthode
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+        <p *ngFor="let process of recetteForm.processus">
+          <li> {{ process }} </li>
+        </p>
+      </mat-expansion-panel>
+       <!-- 3 - Liens -->
+     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          3
+        </mat-panel-title>
+        <mat-panel-description>
+          Liens
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+        <p *ngFor="let lien of recetteForm.liens">
+          <li> {{ lien }} </li>
+        </p>
+      </mat-expansion-panel>
+  </mat-accordion>
+  <mat-toolbar class="toolbarNav">
+    <button mat-button (click)="gotoRecettes()">
+      <mat-icon>arrow_back</mat-icon>Retour</button>
+    <button mat-button>
+      <mat-icon>share</mat-icon>Partager</button>
+  </mat-toolbar>
+  <!-- <button type="button" (click)="gotoRecettes()">Back</button> -->
 </div>
+
+
+<!--
+<mat-card-actions align="end">
+    <button mat-button (click)="gotoRecettes()">
+      <mat-icon>arrow_back</mat-icon>Retour</button>
+    <button mat-button>
+      <mat-icon>share</mat-icon>Partager</button>
+   </mat-card-actions>
+-->

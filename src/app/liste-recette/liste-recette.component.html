@@ -1,7 +1,30 @@
 
   <div> Liste des recettes  </div>
+  <!-- 1 - Toolbar principale -->
+  <mat-toolbar style="min-height: 100px; padding: 40px">
 
-  <mat-card *ngFor="let item of listeRecetteFile" class="recette-card" fle>
+    <mat-form-field style="width: 20rem" floatLabel="never">
+      <input matInput
+             #searchInput="matInput"
+             type="text"
+             placeholder="Recherche"
+             autocomplete="off"/>
+      <mat-icon [color]="searchInput.focused ? 'primary' : ''" matSuffix>search</mat-icon>
+    </mat-form-field>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Guides</button>
+    <button mat-menu-item>Concepts</button>
+    <button mat-menu-item>Tasks</button>
+    <button mat-menu-item>Formulas</button>
+  </mat-menu>
+
+</mat-toolbar>
+
+  <!-- 2 - Liste des recettes -->
+  <mat-card *ngFor="let item of listeRecetteFile" class="recette-card" flex>
     <!-- 1 - Title -->
     <mat-card-header>
       <mat-card-title>{{item.name}}</mat-card-title>

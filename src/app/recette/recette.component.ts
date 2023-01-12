@@ -14,7 +14,7 @@ import { RecetteService } from '../liste-recette/recette.service';
 })
 export class RecetteComponent implements OnInit {
 
-
+  panelOpenState = false;
  recette!: Observable<Recetteclass>;
 
   constructor(private route: ActivatedRoute,
