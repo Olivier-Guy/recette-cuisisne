@@ -10,13 +10,6 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  /*
-  form = new FormGroup({
-    username: new FormControl(null, Validators.required),
-    password: new FormControl(null, Validators.required),
-  });
-  */
-
   form = this.fb.group({
     username: new FormControl(null, Validators.required),
     password: new FormControl(null, Validators.required),
