@@ -12,6 +12,7 @@ constructor() { }
 
   getListeRecette(): Observable<Recetteclass[]> {
     var listeRecette: Recetteclass[] = [];
+
     for (var i = 0; i < Recettes.length; i++ )
     {
       var newRecette = Recettes[i];
@@ -19,8 +20,13 @@ constructor() { }
       var newName = newRecette.nom;
       var newRecetteInstance = new Recetteclass(newId, newName);
       newRecetteInstance.description = newRecette.description;
-      newRecetteInstance.duree = newRecette.duree;
+
       newRecetteInstance.categorie = newRecette.categorie;
+      newRecetteInstance.duree = newRecette.duree;
+      newRecetteInstance.indiceNutritionel = newRecette.indiceNutritionel;
+      newRecetteInstance.typePlat = newRecette.typePlat;
+      newRecetteInstance.difficulte = newRecette.difficulte;
+
       newRecetteInstance.ingredients = newRecette.ingredients;
       newRecetteInstance.processus = newRecette.processus;
       newRecetteInstance.liens = newRecette.liens;
@@ -36,6 +42,5 @@ constructor() { }
       map((listeRecette: Recetteclass[]) => listeRecette.find(recette => recette.id === +id)!)
     );
   }
-
 
 }

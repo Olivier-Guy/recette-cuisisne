@@ -1,5 +1,4 @@
 
-  <div> Liste des recettes  </div>
   <!-- 1 - Toolbar principale -->
   <mat-toolbar style="min-height: 100px; padding: 40px">
 
@@ -11,15 +10,15 @@
              autocomplete="off"/>
       <mat-icon [color]="searchInput.focused ? 'primary' : ''" matSuffix>search</mat-icon>
     </mat-form-field>
-  <button mat-icon-button [matMenuTriggerFor]="menu">
+  <!--<button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>more_vert</mat-icon>
   </button>
-  <mat-menu #menu="matMenu">
+   <mat-menu #menu="matMenu">
     <button mat-menu-item>Guides</button>
     <button mat-menu-item>Concepts</button>
     <button mat-menu-item>Tasks</button>
     <button mat-menu-item>Formulas</button>
-  </mat-menu>
+  </mat-menu> -->
 
 </mat-toolbar>
 
@@ -29,12 +28,21 @@
     <mat-card-header>
       <mat-card-title>{{item.name}}</mat-card-title>
     </mat-card-header>
-    <mat-card-content>{{item.categorie}} - {{item.duree}} - {{item.indiceNutritionel}} - {{item.typePlat}} - {{item.difficulte}}</mat-card-content>
+    <mat-card-content class="card-content">
+      <mat-grid-list cols="4" rows="2" rowHeight="2:1">
+        <mat-grid-tile>
+          <div> Catégorie </div>
+          <div> {{ item.categorie }} </div>
+        </mat-grid-tile>
+        <mat-grid-tile> {{ item.duree }}</mat-grid-tile>
+        <mat-grid-tile> {{ item.indiceNutritionel }} </mat-grid-tile>
+        <mat-grid-tile>  {{ item.typePlat }}  </mat-grid-tile>
+        <mat-grid-tile>  {{ item.difficulte }}  </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
     <mat-card-actions align="end">
       <button mat-button [routerLink]="['/recette', item.id]"> <!-- (click)="openRecette($event) -->
         <mat-icon>open_in_new</mat-icon> Ouvrir</button>
-      <button mat-button>
-        <mat-icon>share</mat-icon> Partager</button>
      </mat-card-actions>
   </mat-card>
 

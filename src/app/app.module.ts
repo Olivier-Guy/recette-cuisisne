@@ -14,7 +14,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDividerModule } from '@angular/material/divider';
-
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -53,7 +53,8 @@ import { RecetteComponent } from './recette/recette.component';
     MatOptionModule,
     HttpClientModule,
     MatExpansionModule,
-    MatDividerModule
+    MatDividerModule,
+    MatGridListModule
   ],
   providers: [FakeBackendProvider],
   bootstrap: [AppComponent]

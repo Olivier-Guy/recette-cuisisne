@@ -3,11 +3,11 @@ export class Recetteclass {
   // 1 - Proprietes
   public id!: number;
   public name!: string;
-  public categorie!: categorieList;
-  public duree!: dureeList;
-  public indiceNutritionel!: indiceNutritionelList;
-  public typePlat!: typePlatList;
-  public difficulte!: difficulteList;
+  public categorie!: string;
+  public duree!: string;
+  public indiceNutritionel!: string;
+  public typePlat!: string;
+  public difficulte!: string;
 
   // 2 - Recette
   public description!: string;
@@ -22,11 +22,11 @@ export class Recetteclass {
 
   serialize() {
     return JSON.stringify(this.toObject());
-}
+  }
 
-  static fromJSON(serialized : string) : Recetteclass {
+  static fromJSON( serialized : string) : Recetteclass {
     const recette : ReturnType<Recetteclass["toObject"]> = JSON.parse(serialized);
-
+    debugger;
     return new Recetteclass(
       recette.id,
       recette.name,
@@ -45,19 +45,79 @@ export class Recetteclass {
     }
   }
 
+  getCategorie ( categorieStr: string) :categorieList {
+
+    switch (categorieStr) {
+      case "Entrée":
+        return categorieList["Entrée"]
+        break;
+      case "Plat principal":
+        return categorieList["Plat principal"]
+        break;
+      case "Dessert":
+        return categorieList["Dessert"]
+        break;
+      default:
+        return categorieList["Divers"];
+        break;
+    }
+  }
+
+  getDuree ( dureeStr: string) :dureeList {
+
+    switch (dureeStr) {
+      case "-":
+        return dureeList["-"]
+        break;
+      case "--":
+        return dureeList["--"]
+        break;
+      case "---":
+        return dureeList["---"]
+        break;
+      case "----":
+        return dureeList["----"]
+        break;
+      case "----":
+        return dureeList["----"]
+        break;
+      case "-----":
+        return dureeList["-----"]
+        break;
+      default:
+        return dureeList["-"];
+        break;
+    }
+  }
+
+  getIndiceNutritionel( indiceStr: string): indiceNutritionelList {
+
+      return indiceNutritionelList.A;
+  }
+
+  getTypePlatList ( typePlatStr: string): typePlatList {
+    return typePlatList.viande;
+  }
+
+  getDifficulteList ( difficulteStr: string): difficulteList {
+    return difficulteList["*"];
+  }
+
 }
 
 export enum categorieList {
   'Entrée',
   'Plat principal',
   'Dessert',
+  'Divers'
 }
 
 export enum indiceNutritionelList {
   'A',
   'B',
   'C',
-  'D'
+  'D',
+  'E'
 }
 
 export enum typePlatList {
