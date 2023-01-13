@@ -29,7 +29,7 @@
       <mat-card-title>{{item.name}}</mat-card-title>
     </mat-card-header>
     <mat-card-content class="card-content">
-      <mat-grid-list cols="4" rows="2" rowHeight="2:1">
+      <!--<mat-grid-list cols="4" rows="2" rowHeight="2:1">
         <mat-grid-tile>
           <div> Catégorie </div>
           <div> {{ item.categorie }} </div>
@@ -38,7 +38,18 @@
         <mat-grid-tile> {{ item.indiceNutritionel }} </mat-grid-tile>
         <mat-grid-tile>  {{ item.typePlat }}  </mat-grid-tile>
         <mat-grid-tile>  {{ item.difficulte }}  </mat-grid-tile>
-      </mat-grid-list>
+      </mat-grid-list> -->
+      <div class="parent-grille">
+        <div class="label_1">Catégorie</div>
+        <div class="content_1">{{ item.categorie }}</div>
+        <div class="label_2">Durée</div>
+        <div class="content_2">{{ item.duree }}</div>
+        <div class="label_3">Indice nutritionel</div>
+        <div class="content_3">{{ item.indiceNutritionel }}</div>
+        <div class="label_4">Difficulte</div>
+        <div class="content_4">{{ item.difficulte }}</div>
+      </div>
+
     </mat-card-content>
     <mat-card-actions align="end">
       <button mat-button [routerLink]="['/recette', item.id]"> <!-- (click)="openRecette($event) -->
