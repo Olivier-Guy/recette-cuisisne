@@ -48,4 +48,38 @@ export class ListeRecetteComponent implements OnInit {
     this.router.navigate(['/recette'])
   }
 
+  onSearchChange(): void {
+
+    debugger;
+    if (this.searchedText != undefined && this.searchedText != "")
+    {
+      var newListeRecette = [];
+      // On recherche le texte dans les recettes
+      for (var i=0; i < this.listeRecetteFile.length; i++ )
+      {
+        if (this.listeRecetteFile[i].name.toUpperCase().includes(this.searchedText.toUpperCase()) ||
+          this.listeRecetteFile[i].description.toUpperCase().includes(this.searchedText.toUpperCase()) ||
+          this.listeRecetteFile[i].ingredients.toString().toUpperCase().includes(this.searchedText.toUpperCase()) ||
+          this.listeRecetteFile[i].processus.toString().toUpperCase().includes(this.searchedText.toUpperCase())
+        )
+        {
+          // On filtre la liste des recettes affichées
+          newListeRecette.push(this.listeRecetteFile[i])
+        }
+      }
+
+      this.listeRecetteFile = newListeRecette;
+
+    }
+    else
+    {
+      // On réinitialise la liste des recettes à partir du fichier
+      this.recetteService.getListeRecette()
+      .subscribe(recette => {
+          this.listeRecetteFile = recette as Recetteclass[]
+      })
+
+    }
+  }
+
 }

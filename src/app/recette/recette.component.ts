@@ -35,5 +35,9 @@ export class RecetteComponent implements OnInit {
   gotoRecettes() {
     this.router.navigate(['/recettes']);
   }
+
+
+
+
 }
 
