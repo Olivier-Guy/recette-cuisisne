@@ -53,7 +53,7 @@
 },
 {
   "id": 5,
-  "nom": "Créme patissière",
+  "nom": "Crème patissière",
   "description": "",
   "duree": "--",
   "categorie": "Dessert",
@@ -62,6 +62,58 @@
   "difficulte": "*",
   "ingredients": ["Sucre 80gr","Beurre 20gr","Lait 25cl","Vanille (poudre ou gousse ou sucre vanillé)","5 oeufs","Maizena 15gr","Farine 10gr", "Une pincée de sel"],
   "processus": ["A feu doux, faire infuser la vanille dans le lait", "A côté, battre les oeufs avec le sucre", "Ajouter la farine et la maizena tamisées", "Verser le lait chaud dans cet appareil, petit à petit", "Ajouter tout le lait dans l'appareil", "Remettre sur le feu et porter à ébullition", "Remuer en attendant que le mélange atteigne la consistance crémeuse" ],
+  "liens": []
+},
+{
+  "id": 6,
+  "nom": "Tapenade",
+  "description": "",
+  "duree": "-",
+  "categorie": "Apéritif",
+  "indiceNutritionel": "C",
+  "typePlat": "",
+  "difficulte": "*",
+  "ingredients": ["150gr Olives noires", "10 gros filets danchois", "30 capres", "2 grosse gousses d'ail", "Poivre", "Jus de citron", "Fécule de pommes de terre"],
+  "processus": [],
+  "liens": []
+},
+{
+  "id": 7,
+  "nom": "Daube provençale",
+  "description": "",
+  "duree": "---",
+  "categorie": "Plat principal",
+  "indiceNutritionel": "C",
+  "typePlat": "Viande",
+  "difficulte": "**",
+  "ingredients": ["Boeuf", "Carottes", "Orange (facultatif)","Olives noires","Vin rouge", "Lardons émincés", "Bouquet garni"],
+  "processus": [],
+  "liens": []
+},
+{
+  "id": 8,
+  "nom": "Escargots à la palavasienne",
+  "description": "Escargots petits gris - Sauce noix / anchois",
+  "duree": "---",
+  "categorie": "Plat principal",
+  "indiceNutritionel": "C",
+  "typePlat": "Viande",
+  "difficulte": "***",
+  "ingredients": ["Escargots petits gris", "200gr de lardons", "12 noix", "3 anchois" ,"Ail, oignon", "Sauce tomate", "1 verre de Vin blanc sec", "3 anchois"],
+  "processus": ["Faire dégorger les escargots avec gros sel et vinaigre environ 3h", "Plonger les escargots dans une casserole d'eau bouillante et les faire baver pendant 5minutes", "Préparer un court bouillon avec un bouquet garni et un oignon piqué d'un clou de girofle", "Plonger les escargots dans le bouillon et faire cuire 25 à 30 minutes", "Préparer la sauce :", "Faire revenir un oignon haché dasn un peu de beurre", "ajouter les lardons et la gousse d'ail écrasée", "ajouter aussi les anchois écrasés dans un eu de beurre", "ajouter un peu de farine", "Ajouter un bouquet garni, la sauce tomate, le vin blanc et un verre d'eau et les noix", "Faire épaissir la sauce par réduction"],
+  "liens": []
+},
+{
+  "id": 9,
+  "nom": "Plov",
+  "description": "",
+  "duree": "---",
+  "categorie": "Plat principal",
+  "indiceNutritionel": "C",
+  "typePlat": "Viande",
+  "difficulte": "***",
+  "ingredients": ["1 Carotte coupé en Juliene", "500gr de viande un peu grasse", "5 gousses d'ail", "2 échalottes", "Laurier", "100gr raisins secs", "Cumin, coriandre, safran, curcuma et paprika", "Environ 300gr de riz"],
+  "processus": ["Faire revenir la viande avec les gousses d'ail entières non  écrasées", "Ajouter les carottes et les échalottes + les épices", "Ajouter les Raisins secs", "Ajouter le riz et un peu d'huile (env 1 verre)", "Ajouter 2 fois plus d'eau que de riz", "Laisser cuire environ 30 minutes"],
   "liens": []
 }
 ]
