@@ -1,7 +1,6 @@
 
   <!-- 1 - Toolbar principale -->
-  <mat-toolbar style="min-height: 100px; padding: 40px">
-
+  <mat-toolbar class="search-toolbar">
     <mat-form-field style="width: 20rem" floatLabel="never">
       <input matInput
              #searchInput="matInput"
@@ -10,16 +9,6 @@
              autocomplete="off" [(ngModel)]="searchedText" (keyup)="onSearchChange()"/>
       <mat-icon [color]="searchInput.focused ? 'primary' : ''" matSuffix >search</mat-icon>
     </mat-form-field>
-  <!--<button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>more_vert</mat-icon>
-  </button>
-   <mat-menu #menu="matMenu">
-    <button mat-menu-item>Guides</button>
-    <button mat-menu-item>Concepts</button>
-    <button mat-menu-item>Tasks</button>
-    <button mat-menu-item>Formulas</button>
-  </mat-menu> -->
-
 </mat-toolbar>
 
   <!-- 2 - Liste des recettes -->
@@ -28,17 +17,8 @@
     <mat-card-header>
       <mat-card-title>{{item.name}}</mat-card-title>
     </mat-card-header>
+    <mat-divider class="divider"></mat-divider>
     <mat-card-content class="card-content">
-      <!--<mat-grid-list cols="4" rows="2" rowHeight="2:1">
-        <mat-grid-tile>
-          <div> Catégorie </div>
-          <div> {{ item.categorie }} </div>
-        </mat-grid-tile>
-        <mat-grid-tile> {{ item.duree }}</mat-grid-tile>
-        <mat-grid-tile> {{ item.indiceNutritionel }} </mat-grid-tile>
-        <mat-grid-tile>  {{ item.typePlat }}  </mat-grid-tile>
-        <mat-grid-tile>  {{ item.difficulte }}  </mat-grid-tile>
-      </mat-grid-list> -->
       <div class="parent-grille">
         <div class="label_1">Catégorie</div>
         <div class="content_1">{{ item.categorie }}</div>

@@ -50,7 +50,12 @@ export class ListeRecetteComponent implements OnInit {
 
   onSearchChange(): void {
 
-    debugger;
+    // On réinitialise la liste des recettes à partir du fichier
+    this.recetteService.getListeRecette()
+    .subscribe(recette => {
+        this.listeRecetteFile = recette as Recetteclass[]
+    });
+
     if (this.searchedText != undefined && this.searchedText != "")
     {
       var newListeRecette = [];
@@ -71,15 +76,7 @@ export class ListeRecetteComponent implements OnInit {
       this.listeRecetteFile = newListeRecette;
 
     }
-    else
-    {
-      // On réinitialise la liste des recettes à partir du fichier
-      this.recetteService.getListeRecette()
-      .subscribe(recette => {
-          this.listeRecetteFile = recette as Recetteclass[]
-      })
 
-    }
   }
 
 }

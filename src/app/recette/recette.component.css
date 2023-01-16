@@ -5,12 +5,24 @@ mat-expansion-panel{
 
 .recette-title-card{
   margin: 10px;
-  background-color: rgb(90, 115, 129);
+  background-color: #00334A;
   height: 25%;
 }
 
+.recete-panel-1{
+  background-color: #007FA9;
+}
+
+.recete-panel-2{
+  background-color: #007FA9;
+}
+
+.recete-panel-3{
+  background-color:#007FA9;
+}
+
 mat-toolbar{
-  background: rgb(87, 96, 104);
+  background: #82CFD8
 }
 
 .toolbarNav{
@@ -22,4 +34,9 @@ mat-toolbar{
   justify-content: space-between;
   padding: 2em;
   box-shadow: 2px 2px 4px 5px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  color: black;
+}
+
+.recette-content-text{
+  font-size: 20px;
 }

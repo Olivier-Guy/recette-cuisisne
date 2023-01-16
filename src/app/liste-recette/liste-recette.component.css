@@ -1,10 +1,28 @@
+.search-toolbar{
+  min-height: 70px;
+  padding: 25px;
+  background-color: #4B5943;
+}
+
 .recette-card{
   margin: 10px;
-  background-color: rgb(90, 115, 129);
+  background-color: #C8D6A2;
+  padding: 5px;
+  color:black
+}
+
+.mat-card>:first-child, .mat-card-content>:first-child {
+  margin-top: 5px;
 }
 
 .card-content{
-  margin-bottom: 2px;
+  margin-top: 6px;
+  margin-bottom: 1px;
+}
+
+.divider{
+  border-color: #4B5943;
+  border-width: 2px;
 }
 
 .parent-grille {
@@ -14,43 +32,34 @@
 .label_1 {
   grid-column: 1;
   grid-row: 1;
-
 }
 .content_1 {
   grid-column: 1;
   grid-row: 2;
-
 }
 .label_2 {
   grid-column: 2;
   grid-row: 1;
-
 }
 .content_2 {
   grid-column: 2;
   grid-row: 2;
-
 }
-
 .label_3 {
   grid-column: 3;
   grid-row: 1;
-
 }
 .content_3 {
   grid-column: 3;
   grid-row: 2;
-
 }
 
 .label_4 {
   grid-column: 4;
   grid-row: 1;
-
 }
 
 .content_4 {
   grid-column: 4;
   grid-row: 2;
-
 }
