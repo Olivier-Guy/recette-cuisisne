@@ -1,18 +1,18 @@
 .search-toolbar{
   min-height: 70px;
   padding: 25px;
-  background-color: #4B5943;
+  background-color: #9985b6;
 }
 
 .recette-card{
   margin: 10px;
-  background-color: #C8D6A2;
+  background-color: #7f9b8d;
   padding: 5px;
-  color:black
+  color: #ffffff;
 }
 
 .mat-card>:first-child, .mat-card-content>:first-child {
-  margin-top: 5px;
+  margin-top: 3px;
 }
 
 .card-content{
@@ -21,8 +21,8 @@
 }
 
 .divider{
-  border-color: #4B5943;
-  border-width: 2px;
+  border-color: #4b3a5e;
+  border-width: 4px;
 }
 
 .parent-grille {
