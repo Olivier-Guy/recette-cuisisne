@@ -1,15 +1,26 @@
+
 .form-container{
   margin: auto;
   margin-top: 15%;
   background: #628272;
-}
 
+}
 
 .btn-login {
   background: #dab7a3;
-}
 
+}
 
 .mat-form-field.mat-focused .mat-form-field-ripple {
   background-color: #69f0ae !important;
+
+}
+
+.background-image{
+  bottom: 0;
+  height: 550px;
+  width: 100%;
+  object-fit: contain;
+  background-image: url("../../assets/fond-login-2.png");
+
 }
