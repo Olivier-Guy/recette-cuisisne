@@ -144,15 +144,15 @@
 },
 {
   "id": 12,
-  "nom": "Pâte à choux",
-  "description": "",
-  "duree": "---",
-  "categorie": "Dessert",
-  "indiceNutritionel": "B",
+  "nom": "Joue de porc au vin rouge",
+  "description": "Pour 6 personne - 20min préparation - 3h de cuisson",
+  "duree": "-----",
+  "categorie": "Plat principal",
+  "indiceNutritionel": "C",
   "typePlat": "",
-  "difficulte": "***",
-  "ingredients": ["100gr de Farine", "70gr de Beure", "15cl d'eau", "2 eufs"],
-  "processus": ["Faire fondre le beurre dans l'eau", "Quand ça arive à ébulltion, incorporer la farine", "Remuer pour sécher la pâte", "Ajouter les oeufs 1 par 1"],
+  "difficulte": "****",
+  "ingredients": ["3 kg de joue de porc", "200 g de lardons fumés", "1 bouteille de vin rouge", "3 oignons", "2 carottes", "1 bouquet garni", "3 gousses d'ail", "2 c. à soupe de farine", "2 c. à soupe de Cognac", "4 épices" ],
+  "processus": ["1 - Préparez la marinade pour la joue de porc : coupez les légumes en petits morceaux, et placez-les dans un grand récipient avec la joue de porc. Ajoutez les épices puis arrosez avec le vin. Réservez pendant une nuit au réfrigérateur", "2 - Le lendemain, égouttez la viande faites-la revenir dans une cocotte, dans un peu d’huile d’olive. Réservez la viande et égouttez les légumes. Réservez-les également", "3 - Dans la cocotte utilisée précédemment, faites revenir les lardons. Une fois qu’ils sont bien colorés, ajoutez les légumes ainsi que l’ail entier", "4 - Quand les légumes commencent à colorer, placez la joue de porc dans la cocotte, versez le Cognac et flambez (attention à ne pas vous brûler !)", "5 - Saupoudrez la viande de farine, mélangez bien, et ajoutez enfin le jus de marinade", "6 - Laissez mijoter à couvert pendant 3h à petit feu, salez et poivrez en fin de cuisson", "ASTUCES : Découvrez la cocotte environ 30 minutes avant la fin de la cuisson pour épaissir la sauce. Vous pouvez préparer la joue de porc au vin rouge en avance, car ce plat est encore meilleur réchauffé. Si vous n’avez pas de Cognac, vous pouvez utiliser de l’Armagnac."],
   "liens": []
 },
 {
